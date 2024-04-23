@@ -31,13 +31,14 @@ const styles = StyleSheet.create({
     position: 'absolute',
     top: '10%',
     left: '10%',
-    marginTop: 0, // Setengah dari tinggi gambar
-    marginLeft: -47, // Setengah dari lebar gambar
+    fontSize: 100,
+    marginTop: 0,
+    marginLeft: -47,
   },
   text: {
     fontSize: 32,
     fontFamily: 'Poppins-SemiBold',
     color: '#E8D4CB',
-    marginTop: 130,
+    marginTop: 50,
   },
 });
