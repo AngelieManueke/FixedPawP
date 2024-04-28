@@ -39,6 +39,6 @@ const styles = StyleSheet.create({
     fontSize: 32,
     fontFamily: 'Poppins-SemiBold',
     color: '#E8D4CB',
-    marginTop: 50,
+    marginTop: 120,
   },
 });
