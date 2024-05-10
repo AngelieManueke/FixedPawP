@@ -1,87 +1,196 @@
+import {StyleSheet, Text, View, TouchableOpacity, Image} from 'react-native';
 import React from 'react';
-import {View, Text, Image, StyleSheet} from 'react-native';
 
-const UserProfile = () => {
+const Homepage = ({navigation}) => {
   return (
     <View style={styles.container}>
-      <View style={styles.header}>
-        <Text style={styles.headerText}>PROFILE</Text>
+      <Text style={styles.text1}>PROFILE</Text>
+      <View style={styles.contentWrapper} />
+      <View style={styles.contentWrapper2}>
+        <View style={styles.profileContainer}>
+          <View style={styles.profile}>
+            <View style={styles.addPhoto}>
+              <TouchableOpacity>
+                <Image source={require('../../assets/image/avatar.png')} />
+              </TouchableOpacity>
+            </View>
+          </View>
+        </View>
+        <View style={styles.line} />
+        <View style={styles.horizontalWrapper1}>
+          <Image
+            source={require('../../assets/image/user.jpg')}
+            style={[
+              styles.image,
+              {width: 40, height: 40, marginLeft: 51, marginTop: 50},
+            ]}
+          />
+          <TouchableOpacity>
+            <Text
+              style={[
+                styles.username,
+                {
+                  fontSize: 25,
+                  marginTop: 53,
+                  paddingLeft: 30,
+                  fontWeight: 'bold',
+                  color: '#000000',
+                },
+              ]}>
+              username
+            </Text>
+          </TouchableOpacity>
+        </View>
+        <View style={styles.horizontalWrapper1}>
+          <Image
+            source={require('../../assets/image/call.jpg')}
+            style={[
+              styles.image,
+              {width: 40, height: 40, marginLeft: 51, marginTop: 35},
+            ]}
+          />
+          <TouchableOpacity>
+            <Text
+              style={[
+                styles.username,
+                {
+                  fontSize: 25,
+                  marginTop: 35,
+                  paddingLeft: 30,
+                  fontWeight: 'bold',
+                  color: '#000000',
+                },
+              ]}>
+              contact
+            </Text>
+          </TouchableOpacity>
+        </View>
+        <View style={styles.horizontalWrapper1}>
+          <Image
+            source={require('../../assets/image/email.jpg')}
+            style={[
+              styles.image,
+              {width: 40, height: 40, marginLeft: 51, marginTop: 35},
+            ]}
+          />
+          <TouchableOpacity>
+            <Text
+              style={[
+                styles.username,
+                {
+                  fontSize: 25,
+                  marginTop: 35,
+                  paddingLeft: 30,
+                  fontWeight: 'bold',
+                  color: '#000000',
+                },
+              ]}>
+              email
+            </Text>
+          </TouchableOpacity>
+        </View>
+        <View style={styles.line} />
       </View>
-      <View style={styles.avatarContainer}>
-        <Image
-          style={styles.avatar}
-          source={require('../../assets/image/avatar.png')}
-        />
-        <View style={styles.cameraIcon}>
-          {/* Add camera icon here */}
-          {/* You can use an icon library or an image for the camera icon */}
+      <View style={styles.contentWrapper3} />
+      <View style={styles.horizontalWrapper2}>
+        <TouchableOpacity onPress={() => navigation.navigate('Homepage')}>
+          <Image
+            source={require('../../assets/image/home.png')}
+            style={[
+              styles.image,
+              {width: 40, height: 35, marginLeft: 51, marginBottom: 12},
+            ]}
+          />
+        </TouchableOpacity>
+        <View style={{flex: 1, alignItems: 'center'}}>
+          <TouchableOpacity onPress={() => navigation.navigate('Article')}>
+            <Image
+              source={require('../../assets/image/article.png')}
+              style={[styles.image, {width: 45, height: 35, marginBottom: 15}]}
+            />
+          </TouchableOpacity>
         </View>
-      </View>
-      <View style={styles.infoContainer}>
-        <View style={styles.infoItem}>
-          {/* User icon */}
-          <Text style={styles.infoLabel}>Username</Text>
-        </View>
-        <View style={styles.infoItem}>
-          {/* Contact icon */}
-          <Text style={styles.infoLabel}>Contact</Text>
-        </View>
-        <View style={styles.infoItem}>
-          {/* Email icon */}
-          <Text style={styles.infoLabel}>Email</Text>
-        </View>
+        <TouchableOpacity onPress={() => navigation.navigate('Profile')}>
+          <Image
+            source={require('../../assets/image/profile.png')}
+            style={[
+              styles.image,
+              {width: 46, height: 42, marginRight: 45, marginBottom: 15},
+            ]}
+          />
+        </TouchableOpacity>
       </View>
     </View>
   );
 };
 
+export default Homepage;
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'white',
+    backgroundColor: '#FFD0D0',
   },
-  header: {
-    backgroundColor: 'pink',
-    paddingVertical: 20,
-    alignItems: 'center',
+  text1: {
+    textAlign: 'center',
+    marginTop: 50,
+    fontSize: 35,
+    fontFamily: 'WorkSans',
+    color: '#000000',
   },
-  headerText: {
-    color: 'white',
-    fontSize: 18,
-    fontWeight: 'bold',
+  contentWrapper: {
+    flex: 1,
   },
-  avatarContainer: {
-    alignItems: 'center',
+  contentWrapper2: {
+    flex: 5,
+    backgroundColor: '#FFFFFF',
+    borderTopLeftRadius: 40,
+    borderTopRightRadius: 40,
+  },
+  horizontalWrapper1: {
+    flexDirection: 'row',
     marginTop: 20,
   },
-  avatar: {
-    width: 100,
-    height: 100,
-    borderRadius: 50,
-    borderWidth: 2,
-    borderColor: 'gray',
+  contentWrapper3: {
+    flex: 0.1,
   },
-  cameraIcon: {
-    position: 'absolute',
-    bottom: 0,
-    right: 0,
-    backgroundColor: 'lightgray',
-    padding: 5,
-    borderRadius: 15,
-  },
-  infoContainer: {
-    marginTop: 20,
-    paddingHorizontal: 20,
-  },
-  infoItem: {
+  horizontalWrapper2: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginBottom: 10,
   },
-  infoLabel: {
-    marginLeft: 10,
-    fontSize: 16,
+  profileContainer: {
+    marginTop: -80,
+    alignItems: 'center',
+  },
+  profile: {
+    backgroundColor: '#FFFFFF',
+    alignItems: 'center',
+    justifyContent: 'center',
+    height: 160,
+    width: 160,
+    borderRadius: 200 / 2,
+    borderWidth: 1,
+    borderColor: '#8D92A3',
+    borderStyle: 'dashed',
+  },
+  addPhoto: {
+    backgroundColor: '#F0F0F0',
+    width: 120,
+    height: 120,
+    borderRadius: 120 / 2,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  addPhotoLabel: {
+    fontFamily: 'Poppins-Light',
+    fontSize: 14,
+    width: 40,
+    textAlign: 'center',
+  },
+  line: {
+    borderBottomWidth: 1,
+    borderBottomColor: '#000000',
+    marginHorizontal: 20,
+    marginTop: 50,
   },
 });
-
-export default UserProfile;

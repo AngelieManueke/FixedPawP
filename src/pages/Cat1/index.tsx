@@ -3,20 +3,20 @@ import {View, Text, Image, StyleSheet, TouchableOpacity} from 'react-native';
 import {Gap} from '../../components/atoms';
 import {BackButton} from '../../components/molecules';
 
-const Dog1 = ({navigation}) => {
+const Cat1 = ({navigation}) => {
   return (
     <View style={styles.container}>
       <View style={styles.containerImage}>
-        <TouchableOpacity onPress={() => navigation.navigate('Homepage')}>
+        <TouchableOpacity onPress={() => navigation.navigate('Homepage2')}>
           <BackButton/>
         </TouchableOpacity>
         <View>
           <Image
-            source={require('../../assets/image/muick.png')}
+            source={require('../../assets/image/Ragdoll1.png')}
             style={styles.dogImage}
           />
         </View>
-        <Text style={styles.dogName}>MUICK</Text>
+        <Text style={styles.dogName}>NERO</Text>
         <View style={styles.iconContainer}>
           <View style={styles.iconContainer1}>
             <Image source={require('../../assets/image/male.png')}/>
@@ -33,7 +33,7 @@ const Dog1 = ({navigation}) => {
         </View>
         <Gap height={32}/>
         <Text style={styles.corgisText}>
-          corgis are friendly, intelligent and loyal dogs. They have unique short legs and long bodies, and they are always full of energy and love to play. Corgis are perfect for families with children, and they will always be your best friend.
+        Ragdoll cats are known for their gentle and laid-back temperament. They often go limp when picked up, which is how they got their name. They are affectionate and enjoy being around people, often following their owners around the house. Ragdolls are also typically good with children and other pets, making them wonderful companions for families.
         </Text>
         <Gap height={24}/>
         <View>
@@ -156,4 +156,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Dog1;
+export default Cat1;

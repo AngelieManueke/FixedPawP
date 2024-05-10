@@ -3,23 +3,23 @@ import {View, Text, Image, StyleSheet, TouchableOpacity} from 'react-native';
 import {Gap} from '../../components/atoms';
 import {BackButton} from '../../components/molecules';
 
-const Dog1 = ({navigation}) => {
+const Cat3 = ({navigation}) => {
   return (
     <View style={styles.container}>
       <View style={styles.containerImage}>
-        <TouchableOpacity onPress={() => navigation.navigate('Homepage')}>
+        <TouchableOpacity onPress={() => navigation.navigate('Homepage2')}>
           <BackButton/>
         </TouchableOpacity>
         <View>
           <Image
-            source={require('../../assets/image/muick.png')}
+            source={require('../../assets/image/American1.png')}
             style={styles.dogImage}
           />
         </View>
-        <Text style={styles.dogName}>MUICK</Text>
+        <Text style={styles.dogName}>BOBBY</Text>
         <View style={styles.iconContainer}>
           <View style={styles.iconContainer1}>
-            <Image source={require('../../assets/image/male.png')}/>
+            <Image source={require('../../assets/image/female.png')}/>
             <Text style={styles.iconText}>Sex</Text>
           </View>
           <View style={styles.iconContainer2}>
@@ -33,7 +33,7 @@ const Dog1 = ({navigation}) => {
         </View>
         <Gap height={32}/>
         <Text style={styles.corgisText}>
-          corgis are friendly, intelligent and loyal dogs. They have unique short legs and long bodies, and they are always full of energy and love to play. Corgis are perfect for families with children, and they will always be your best friend.
+        American Shorthair cats are known for their friendly and adaptable personalities. They're typically easygoing, sociable, and good-natured, making them great companions for families and other pets. They also tend to be relatively low-maintenance, enjoying both playtime and relaxation in equal measure.
         </Text>
         <Gap height={24}/>
         <View>
@@ -156,4 +156,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Dog1;
+export default Cat3;

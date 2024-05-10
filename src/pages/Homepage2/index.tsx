@@ -1,99 +1,99 @@
-import {StyleSheet, Text, View, TouchableOpacity, Image} from 'react-native';
+import {Image, StyleSheet, Text, TouchableOpacity, View, ScrollView} from 'react-native';
 import React from 'react';
-import {NavigationContainer} from '@react-navigation/native';
+
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
 const Homepage = ({navigation}) => {
   const Tab = createBottomTabNavigator();
   return (
-    <View style={styles.container}>
-      <Text style={styles.text1}>Hi Petpals,</Text>
-      <Text style={styles.text2}>let’s choose a pet as</Text>
-      <Text style={styles.text2}>your companion</Text>
+    <ScrollView contentContainerStyle={styles.scrollViewContent}>
+      <View style={styles.container}>
+        <Text style={styles.text1}>Hi Petpals,</Text>
+        <Text style={styles.text2}>let’s choose a pet as</Text>
+        <Text style={styles.text2}>your companion</Text>
 
-      <View style={styles.contentWrapper} />
+        <View style={styles.contentWrapper} />
 
-      <View style={styles.contentWrapper2}>
-        <Text style={styles.text2}> Pet Category</Text>
-        <View style={styles.horizontalWrapper}>
-          <TouchableOpacity
-            style={[styles.boxWrapper2, {marginLeft: 5}]}
-            onPress={() => navigation.navigate('Homepage')}>
-            <Image
-              source={require('../../assets/image/dog.png')}
-              style={[
-                styles.image,
-                {width: 35, height: 35},
-                {marginLeft: 18},
-                {marginTop: 9},
-              ]}
-            />
-          </TouchableOpacity>
-        </View>
-
-        <View style={styles.box}>
-          <Image
-            source={require('../../assets/image/ragdoll.png')}
-            style={styles.image}
-          />
-          <TouchableOpacity
-            style={[styles.boxWrapper, {marginLeft: 25}, {marginTop: 10}]}>
-            <Text style={styles.anjing1}>RAGDOLL</Text>
-          </TouchableOpacity>
-        </View>
-        <View style={styles.box}>
-          <Image
-            source={require('../../assets/image/british.png')}
-            style={styles.image}
-          />
-          <TouchableOpacity
-            style={[styles.boxWrapper, {marginLeft: 3}, {marginTop: 10}]}>
-            <Text style={styles.anjing2}>BRITISH</Text>
-          </TouchableOpacity>
-        </View>
-        <View style={styles.box}>
-          <Image
-            source={require('../../assets/image/american.png')}
-            style={styles.image}
-          />
-          <TouchableOpacity
-            style={[styles.boxWrapper, {marginLeft: 40}, {marginTop: 10}]}>
-            <Text style={styles.anjing3}>AMERICAN</Text>
-          </TouchableOpacity>
-        </View>
-      </View>
-
-      <View style={styles.contentWrapper3}>
-        <View style={styles.horizontalWrapper2}>
-          <TouchableOpacity onPress={() => navigation.navigate('Homepage')}>
-            <Image
-              source={require('../../assets/image/home.png')}
-              style={[
-                styles.image,
-                {width: 40, height: 35, marginLeft: 51, marginTop: 12},
-              ]}
-            />
-          </TouchableOpacity>
-          <View style={{flex: 1, alignItems: 'center'}}>
-            <TouchableOpacity onPress={() => navigation.navigate('Article')}>
+        <View style={styles.contentWrapper2}>
+          <Text style={styles.text2}> Pet Category</Text>
+          <View style={styles.horizontalWrapper}>
+            <TouchableOpacity
+              style={[styles.boxWrapper2, {marginLeft: 5}]}
+              onPress={() => navigation.navigate('Homepage')}>
               <Image
-                source={require('../../assets/image/article.png')}
-                style={[styles.image, {width: 45, height: 35, marginTop: 15}]}
+                source={require('../../assets/image/dog.png')}
+                style={styles.doglogo}
               />
             </TouchableOpacity>
           </View>
-          <TouchableOpacity onPress={() => navigation.navigate('Profile')}>
+
+          <View style={styles.box}>
             <Image
-              source={require('../../assets/image/profile.png')}
-              style={[
-                styles.image,
-                {width: 46, height: 42, marginRight: 45, marginTop: 10},
-              ]}
+              source={require('../../assets/image/ragdoll.png')}
+              style={styles.image1}
             />
-          </TouchableOpacity>
+            <TouchableOpacity
+              style={[styles.boxWrapper, {marginTop: 10}]}
+              onPress={() => navigation.navigate('Cat1')}>
+              <Text style={styles.anjing1}>RAGDOLL</Text>
+            </TouchableOpacity>
+          </View>
+          <View style={styles.box}>
+            <Image
+              source={require('../../assets/image/british.png')}
+              style={styles.image2}
+            />
+            <TouchableOpacity
+              style={[styles.boxWrapper, {marginLeft: -20},{marginTop: 10}]}
+              onPress={() => navigation.navigate('Cat2')}>
+              <Text style={styles.anjing2}>BRITISH</Text>
+            </TouchableOpacity>
+          </View>
+          <View style={styles.box}>
+            <Image
+              source={require('../../assets/image/american.png')}
+              style={styles.image3}
+            />
+            <TouchableOpacity
+              style={[styles.boxWrapper, {marginLeft: 15}, {marginTop: 10}]}
+              onPress={() => navigation.navigate('Cat3')}>
+              <Text style={styles.anjing3}>AMERICAN</Text>
+            </TouchableOpacity>
+          </View>
+        </View>
+
+        <View style={styles.contentWrapper3}>
+          <View style={styles.horizontalWrapper2}>
+            <TouchableOpacity onPress={() => navigation.navigate('Homepage')}>
+              <Image
+                source={require('../../assets/image/home.png')}
+                style={[
+                  styles.image,
+                  {width: 45, height: 42, marginLeft: 51, marginTop: 5},
+                ]}
+              />
+            </TouchableOpacity>
+            <View style={{flex: 1, alignItems: 'center'}}>
+              <TouchableOpacity onPress={() => navigation.navigate('Article')}>
+                <Image
+                  source={require('../../assets/image/article.png')}
+                  style={[styles.image, {width: 45, height: 44, marginTop: 5}]}
+                />
+              </TouchableOpacity>
+            </View>
+            <TouchableOpacity onPress={() => navigation.navigate('Profile')}>
+              <Image
+                source={require('../../assets/image/profile.png')}
+                style={[
+                  styles.image,
+                  {width: 45, height: 42, marginRight: 45, marginTop: 5},
+                ]}
+              />
+            </TouchableOpacity>
+          </View>
         </View>
       </View>
-    </View>
+    </ScrollView>
   );
 };
 
@@ -103,6 +103,9 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#FFD0D0',
+  },
+  scrollViewContent: {
+    flexGrow: 1,
   },
   text1: {
     padding: 20,
@@ -131,9 +134,9 @@ const styles = StyleSheet.create({
     paddingLeft: 15,
   },
   horizontalWrapper: {
-    flexDirection: 'row',
     justifyContent: 'flex-start',
     paddingHorizontal: 20,
+    
   },
   box: {
     flexDirection: 'row',
@@ -142,6 +145,12 @@ const styles = StyleSheet.create({
     backgroundColor: '#FFD0D0',
     borderRadius: 20,
     marginBottom: 30,
+    borderBottomWidth: 5,
+    borderColor: 'rgba(0, 0, 0, 0.3)',
+    shadowColor: '#000',
+    shadowOpacity: 0.5,
+    borderLeftWidth: 0.1,
+    borderRightWidth: 0.1,
   },
   boxWrapper: {
     width: '70%',
@@ -149,6 +158,12 @@ const styles = StyleSheet.create({
     backgroundColor: '#F9DADA',
     borderRadius: 30,
     marginRight: 50,
+    borderBottomWidth: 5,
+    borderColor: 'rgba(0, 0, 0, 0.3)',
+    shadowColor: '#000',
+    shadowOpacity: 0.5,
+    borderLeftWidth: 0.1,
+    borderRightWidth: 0.1,
   },
   boxWrapper2: {
     width: '20%',
@@ -156,6 +171,12 @@ const styles = StyleSheet.create({
     backgroundColor: '#F9DADA',
     borderRadius: 10,
     marginBottom: 25,
+    borderBottomWidth: 5,
+    borderColor: 'rgba(0, 0, 0, 0.3)',
+    shadowColor: '#000',
+    shadowOpacity: 0.5,
+    borderLeftWidth: 0.1,
+    borderRightWidth: 0.1,
   },
   anjing1: {
     color: '#000',
@@ -183,4 +204,19 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
   },
+  image1: {
+    marginTop: -7,
+  },
+  image2: {
+    marginTop: -20,
+  },
+  image3: {
+    marginTop: -11,
+  },
+  doglogo: {
+    width: 32,
+    height: 35,
+    marginLeft: 22,
+    marginTop: 9,
+  }
 });

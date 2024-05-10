@@ -24,14 +24,12 @@ const SignUp = ({navigation}) => {
       <TextInput
         style={[styles.input, styles.usernameInputText]}
         placeholder="username"
-        textAlign="center"
         onChangeText={setUsername}
         value={username}
       />
       <TextInput
         style={[styles.input, styles.passwordInput]}
         placeholder="email"
-        textAlign="center"
         secureTextEntry={true}
         onChangeText={setPassword}
         value={password}
@@ -39,7 +37,6 @@ const SignUp = ({navigation}) => {
       <TextInput
         style={[styles.input, styles.passwordInput]}
         placeholder="Password"
-        textAlign="center"
         secureTextEntry={true}
         onChangeText={setPassword}
         value={password}
@@ -47,7 +44,6 @@ const SignUp = ({navigation}) => {
       <TextInput
         style={[styles.input, styles.passwordInput]}
         placeholder="confirm password"
-        textAlign="center"
         secureTextEntry={true}
         onChangeText={setPassword}
         value={password}
@@ -83,6 +79,7 @@ const styles = StyleSheet.create({
     height: 48,
     width: 350,
     marginBottom: 20,
+    paddingLeft: 40,
   },
   signupText: {
     marginTop: 90,

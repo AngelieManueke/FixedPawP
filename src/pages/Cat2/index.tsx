@@ -3,20 +3,20 @@ import {View, Text, Image, StyleSheet, TouchableOpacity} from 'react-native';
 import {Gap} from '../../components/atoms';
 import {BackButton} from '../../components/molecules';
 
-const Dog1 = ({navigation}) => {
+const Cat2 = ({navigation}) => {
   return (
     <View style={styles.container}>
       <View style={styles.containerImage}>
-        <TouchableOpacity onPress={() => navigation.navigate('Homepage')}>
+        <TouchableOpacity onPress={() => navigation.navigate('Homepage2')}>
           <BackButton/>
         </TouchableOpacity>
         <View>
           <Image
-            source={require('../../assets/image/muick.png')}
+            source={require('../../assets/image/British1.png')}
             style={styles.dogImage}
           />
         </View>
-        <Text style={styles.dogName}>MUICK</Text>
+        <Text style={styles.dogName}>PICIS</Text>
         <View style={styles.iconContainer}>
           <View style={styles.iconContainer1}>
             <Image source={require('../../assets/image/male.png')}/>
@@ -33,7 +33,7 @@ const Dog1 = ({navigation}) => {
         </View>
         <Gap height={32}/>
         <Text style={styles.corgisText}>
-          corgis are friendly, intelligent and loyal dogs. They have unique short legs and long bodies, and they are always full of energy and love to play. Corgis are perfect for families with children, and they will always be your best friend.
+        British Shorthair cats are known for their calm and easygoing demeanor. They're typically independent yet affectionate, enjoying lounging around the house and being near their owners without being overly demanding. They are also known for their round faces and dense, plush coats, which give them a distinctive appearance.
         </Text>
         <Gap height={24}/>
         <View>
@@ -156,4 +156,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Dog1;
+export default Cat2;

@@ -68,6 +68,7 @@ const styles = StyleSheet.create({
     height: 48,
     width: 350,
     marginBottom: 20,
+    paddingLeft: 40,
   },
   welcomeText: {
     marginTop: 60,

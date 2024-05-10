@@ -3,7 +3,7 @@ import {View, Text, Image, StyleSheet, TouchableOpacity} from 'react-native';
 import {Gap} from '../../components/atoms';
 import {BackButton} from '../../components/molecules';
 
-const Dog1 = ({navigation}) => {
+const Dog3 = ({navigation}) => {
   return (
     <View style={styles.container}>
       <View style={styles.containerImage}>
@@ -12,11 +12,11 @@ const Dog1 = ({navigation}) => {
         </TouchableOpacity>
         <View>
           <Image
-            source={require('../../assets/image/muick.png')}
+            source={require('../../assets/image/golden1.png')}
             style={styles.dogImage}
           />
         </View>
-        <Text style={styles.dogName}>MUICK</Text>
+        <Text style={styles.dogName}>ARCHI</Text>
         <View style={styles.iconContainer}>
           <View style={styles.iconContainer1}>
             <Image source={require('../../assets/image/male.png')}/>
@@ -31,11 +31,11 @@ const Dog1 = ({navigation}) => {
             <Text >Weight</Text>
           </View>
         </View>
-        <Gap height={32}/>
+        <Gap height={28}/>
         <Text style={styles.corgisText}>
-          corgis are friendly, intelligent and loyal dogs. They have unique short legs and long bodies, and they are always full of energy and love to play. Corgis are perfect for families with children, and they will always be your best friend.
+        Golden Retrievers are beloved for their gentle and friendly nature. They're known for being loyal, affectionate, and eager to please, which makes them excellent family pets and therapy dogs. They also tend to be good with children and other pets, making them popular choices for households with multiple animals.
         </Text>
-        <Gap height={24}/>
+        <Gap height={20}/>
         <View>
           <TouchableOpacity style={styles.adoptButton} onPress={() => navigation.navigate('DataAdopter')}>
             <Text style={styles.adoptButtonText}>adopt now</Text>
@@ -72,6 +72,7 @@ const styles = StyleSheet.create({
     color: 'black',
     textAlign: 'center',
     bottom: 280,
+    marginTop: -30,
   },
   infoContainer: {
     flexDirection: 'row',
@@ -92,7 +93,7 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     alignItems: 'center',
     justifyContent: 'center',
-    marginTop: -25,
+    marginTop: -20,
     borderBottomWidth: 5,
     borderColor: 'rgba(0, 0, 0, 0.3)',
     shadowColor: '#000',
@@ -107,13 +108,13 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     alignItems: 'center',
     justifyContent: 'center',
+    marginTop: -20,
     borderBottomWidth: 5,
     borderColor: 'rgba(0, 0, 0, 0.3)',
     shadowColor: '#000',
     shadowOpacity: 0.5,
     borderLeftWidth: 0.1,
     borderRightWidth: 0.1,
-    marginTop: -25,
   },
   iconContainer3: {
     backgroundColor: '#FFD0D0',
@@ -122,7 +123,7 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     alignItems: 'center',
     justifyContent: 'center',
-    marginTop: -25,
+    marginTop: -20,
     borderBottomWidth: 5,
     borderColor: 'rgba(0, 0, 0, 0.3)',
     shadowColor: '#000',
@@ -156,4 +157,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Dog1;
+export default Dog3;
